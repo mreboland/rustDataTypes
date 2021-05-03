@@ -82,4 +82,26 @@ fn main() {
     hello.push('w'); // push a character into our String
     hello.push_str("orld!"); // push a string literal into our String
     println!("{}", hello);
+
+    // TUPLES
+
+    // A tuple is a grouping of values of different types collected into one compound. They have fixed length, meaning that after they're declared, they can't grow or shrink in size. The type of a tuple is defined by the sequence of each member's type.
+
+    // Ex: A tuple of length 3:
+    // ("hello", 5i32, 'c');
+
+    // The above tuple has the type signature (%'static str, i32, char), where:
+    // &'static str is the type of the first element
+    // i32 is the type of the second element
+    // char the third
+
+    // Tuples elements can be accessed by position, which is known as tuple indexing.
+    let tuple = ("hello", 5, 'c');
+
+    assert_eq!(tuple.0, "hello");
+    assert_eq!(tuple.1, 5);
+    assert_eq!(tuple.2, 'c');
+
+    // The assert_eq! macro verifies that two expressions are equal to each other.
+    // Tuples are useful when we want to combine different types into a single value. For instance, functions can use tuples to return multiple values because tuples can hold any number of values.
 }

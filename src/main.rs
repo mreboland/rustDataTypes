@@ -60,4 +60,26 @@ fn main() {
 
     let is_bigger = 1 > 4;
     println!("{}", is_bigger); // prints "false"
+
+    // CHARACTER AND STRINGS
+
+    // Rust has two string types and one character type. All of them are UTF-8 representations.
+    // The 'char' type is the most primitive type among them and is specified with single quotation marks.
+
+    let _c = 'z';
+    let _z = 'Z';
+    let _heart_eyed_cat = '😻';
+
+    // the 'str' type, also know as a string slice, is a view into string data. We refer to those types in referenced form by using &str. We can think of &str as a pointer to an immutable string data. String literals are all of type &str.
+
+    // String literals aren't suitable for every situation in which we might use text. That's because not every string can be known at compile time. For example when a user interacts with a program and sends text. For these situations, Rust has a second string type, 'String'. This type is allocated on the heap. It can store an amount of text that's unknown to us at compile time.
+
+    // We can think of 'String' data as string data that can change as your program runs, while '&str' are immutable views into string data that do not changes as our program runs.
+
+    // We can create a 'String' from a string literal by using the 'from' function
+
+    let mut hello = String::from("Hello, "); // create a String from a string literal
+    hello.push('w'); // push a character into our String
+    hello.push_str("orld!"); // push a string literal into our String
+    println!("{}", hello);
 }

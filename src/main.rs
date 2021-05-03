@@ -51,4 +51,13 @@ fn main() {
 
     // Multiplication
     println!("3 * 6 = {}", 3 * 6);
+
+    // We're using suffixes on the literal numbers to tell Rust which data type they will be (e.g., 1u32 is the number one as an unsigned 32-bit integer). If we don't provide these type annotations Rust tries to infer the type from context defaulting to i32 (a signed 32-bit integer) when it's ambiguous.
+
+    // BOOLEANS
+
+    // Booleans in Rust are represented by the type bool and have two possible values: true or false.
+
+    let is_bigger = 1 > 4;
+    println!("{}", is_bigger); // prints "false"
 }
